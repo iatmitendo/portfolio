@@ -1,0 +1,116 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity=
+	"sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+	crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;
+	0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="form.css">
+	<title>About Us</title>
+
+	</head>
+
+	<body>
+
+<div class="header">
+<div class="logo">
+<h1>Benito<i class="fa-solid fa-bowl-food"></i></h1>
+</div>
+
+<div class="nav">
+<ul>
+<li><a href="index.html">Home</a></li>
+	<li><a href="About.html">About</a></li>
+	<li><a href="Dishes.html">Dishes</a></li>
+	<li><a href="Delivery.html">Delivery</a></li>
+<li><a href="Contact.html">Contact</a></li>
+</ul>
+</div>
+
+<div class="contact-header">
+<h1>Call us now!<i class="fa-solid fa-phone"></i>07041670920</h1>
+</div>
+
+<div class="button-header">
+<button><a href="index.html">Previous Page</a><i class="fa-solid fa-right-to-bracket"></i></button>
+</div>
+
+</div>
+
+
+<div class="element">
+<div class="element-map">
+<img src="map.png">
+</div>
+
+	<div class="form">
+	<form onsubmit="return register()" name="myform">
+	<p>---- Resesrvation ----</p>
+	<h1>Book a table Online</h1>
+	<input type="text" name="text" placeholder="Your Name"> <input type="email" name="email" placeholder="Your Email"> <br>
+	<input type="date" name="date" placeholder="Date and Time"> 
+	<select>
+	<option>No. of People</option>
+	<option>People 1</option>
+	<option>People 2</option>
+	<option>People 3</option>
+	</select>
+	<textarea>Special Request</textarea><br>
+	<button>Book Now</button>
+	</form>
+	</div>
+
+	</div>
+
+		<div class="footer">
+
+		<div class="footer-element">
+		<h3>Your Company Name</h3>
+		</div>
+
+		<div class="footer-icon">
+		<i class="fa-brands fa-square-facebook"></i>
+		<i class="fa-brands fa-twitter"></i>
+		<i class="fa-brands fa-instagram"></i>
+		<i class="fa-brands fa-google"></i>
+		</div>
+
+		<div class="footer-text">
+		<p>classThemes Copyright &copy; 2024 All Rights Reserved Terms of Use and Privacy Policy</p>
+		</div>
+
+		</div> 
+
+<script "text/javascript">
+function register(){
+
+let name = document.forms["myform"]["text"].value;
+let email = document.forms["myform"]["email"].value;
+let date = document.forms["myform"]["date"].value;
+
+	if(name === ""){
+	alert("Name must be filled out");
+	return false;
+	}
+
+	if(email === "" || !email.includes("@")){
+	alert("Enter correct email");
+	return false;
+	}
+
+	if(date === ""){
+	alert("Date must be chosen");
+	return false;
+	}
+
+	alert("Booking Successful");
+	return true;
+}
+
+</script>
+
+</body>
+</html>

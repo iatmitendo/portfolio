@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity=
+		   "sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+		  crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;
+	0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+	<link rel="stylesheet" href="contact.css">
+	<title>BenitoDelicacies</title>
+
+		</head>
+
+		<body>
+	
+	<div class="header">
+	<nav>
+<div class="logo-bar">
+
+<div class="logo"><h1>BENITO<i class="fa-solid fa-bowl-food"></i></h1></div>
+<i class="fa-solid fa-bars siderbaropen"></i>
+
+
+<div class="order">
+<div class="logo-toggle">
+<div class="logo"><h1>BENITO<i class="fa-solid fa-bowl-food"></i></h1></div>
+<i class="fa-solid fa-xmark siderbarclose"></i>
+</div>
+
+<div class="nav-links">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="About.html">About</a></li>
+<li><a href="Dishes.html">Dishes</a></li>
+<li><a href="Delivery.html">Delivery</a></li>
+<li><a href="Contact.html" id="active">Contact</a></li>
+
+</ul>
+</div>
+
+</div>
+
+
+
+</div>
+
+</nav>
+
+	<div class="contact-header">
+	<h1>Call us now!<i class="fa-solid fa-phone"></i>07041670920</h1>
+	</div>
+	
+	<div class="button-header">
+	<button><a href="index.html">Home Page</a><i class="fa-solid fa-right-to-bracket"></i></button>
+	</div>
+	
+	
+</div>
+
+<div class="container">
+<div class="booking">
+<h1>Reservations</h1>
+<p>Please call<br>
+(070) 4167-0920</p>
+</div>
+
+<div class="address">
+<h1>Address</h1>
+<p>4321 California St,<br>
+San Francisco, CA 12345</p>
+</div>
+
+<div class="opening">
+<h1>Opening Hours</h1>
+<p>Mon-Thurs:10:00 AM - 11:00 PM<br>
+Fri-Sun: 11:00 AM - 02:00 AM</p>
+</div>
+
+</div>
+
+	<div class="form">
+	<form onsubmit="return register()" name="form">
+	<h1>send us a message</h1>
+	<input type="text" name="text" placeholder="Name"> <input type="email" name="email" id="btn" placeholder="Email"><br>
+	<textarea name="textarea">Type your Message</textarea><br>
+	<button>Send Message</button>
+	</form>
+	</div>
+
+		<div class="footer">
+		<div class="findus">
+		<h1>Find us</h1>
+		<p>123 nulla a cursus rhoncus, <br>
+		augue sem viverra 10870 <br>
+		id ultricies sapien</p>
+		</div>
+
+		<div class="reservation">
+		<h1>Reservation</h1>
+		<p>090-080-0650 | <br>
+		090-070-0430 <br>
+		info@company.com <br>
+		LINE: eatery247</p> 
+		</div>
+
+		 <div class="footer-banner">
+		<div class="footer-banner-image">
+		<img src="bar.jpg">
+		</div>
+
+		<div class="footer-overlay"></div>
+
+	<div class="footer-banner-text">
+	<h1>Open Hours</h1>
+	<h2>Monday: Closed</h2>
+	<h2>Tuesday to Friday</h2>
+	<p>7:00 AM - 9:00 PM</p>
+	<h2>Saturday - Sunday</h2>
+	<p>11:00 AM - 10:00 PM</p>
+	</div>
+	</div> 
+
+		<div class="footer-icon">
+		<i class="fa-brands fa-square-facebook"></i>
+		<i class="fa-brands fa-twitter"></i>
+		<i class="fa-brands fa-instagram"></i>
+		<i class="fa-brands fa-google"></i>
+		<p>Copyright &copy; 2024</p>
+		<h3>Your Company Name</h3>
+		<h4>Design:Ademola Praise</h4>
+		</div>
+
+		</div>
+
+<script "text/javascript">
+const body = document.querySelector("body");
+const nav = document.querySelector("nav");
+const siderbarclose = document.querySelector(".siderbarclose");
+const siderbaropen = document.querySelector(".siderbaropen");
+
+// for navigation
+siderbaropen.addEventListener("click", () =>{
+	nav.classList.add("active");
+})
+
+body.addEventListener("click", e =>{
+	let clicked = e.target;
+	
+	if(!clicked.classList.contains("siderbaropen") && !clicked.classList.contains("order")){
+	nav.classList.remove("active");
+	}
+})
+
+
+function register(){
+
+			let name = document.forms["form"]["text"].value;
+			let email = document.forms["form"]["email"].value;
+			let textarea = document.forms["form"]["textarea"].value;
+
+	if(name === ""){
+	alert("Name must be filled out");
+	return false;
+	}
+
+	if(email === "" || !email.includes("@")){
+	alert("Enter correct email");
+	return false;
+	}
+
+		if(textarea === "" || textarea.length < 10){
+		alert("Enter a Message");
+		return false;
+		}
+		
+
+		alert("Thanks For Contacting Us");
+		return true;
+	}
+
+</script>
+
+</body>
+</html>
